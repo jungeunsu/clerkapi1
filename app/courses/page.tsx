@@ -1,6 +1,7 @@
 'use client'
 import Courses from '@/components/Courses'
 import React, { useEffect, useState } from 'react'
+import LoadingPage from '../loading'
 
 export default function CoursesPage() {
   const [courses, setCourses] = useState([])
@@ -22,7 +23,7 @@ export default function CoursesPage() {
 
   return (
     <div>
-      <h1 className="text-2xl font bold mb-4">Courses</h1>
+      <h1 className="text-2xl font-bold mb-4">Courses</h1>
       <Courses courses={courses} />
     </div>
   )
