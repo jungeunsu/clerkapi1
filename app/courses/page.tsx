@@ -1,7 +1,6 @@
 'use client'
 import Courses from '@/components/Courses'
 import React, { useEffect, useState } from 'react'
-import LoadingPage from '../loading'
 
 export default function CoursesPage() {
   const [courses, setCourses] = useState([])

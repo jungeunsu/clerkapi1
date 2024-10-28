@@ -16,9 +16,9 @@ export default async function ReposPage() {
   )
   await new Promise((resolve) => setTimeout(resolve, 1000))
   {
-    next: {
-      revalidate: 60
-    }
+    //next: {
+    // revalidate: 60
+    //}
   }
 
   await new Promise((resolve) => setTimeout(resolve, 1000))
@@ -28,12 +28,11 @@ export default async function ReposPage() {
   return (
     <div>
       <h2 className="text-2xl font-bold mb-4">
-        {' '}
         Github Repositories of {username}
       </h2>
       <ul>
         {
-          /* eslintpdisable @typescript-eslint/no-explicit-any*/
+          /*eslint-disable @typescript-eslint/no-explicit-any*/
           repos.map((repo: any) => (
             <li key={repo.id} className="bg-gray-600 m-4 p-4 rounded-md">
               <Link href={`/repos/${repo.name}`}>
